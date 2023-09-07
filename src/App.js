@@ -8,22 +8,22 @@ const App = () => {
     {
       title: 'Car Insurance',
       amount: 294.67,
-      date: new Date(2023, 8, 6)
+      date: new Date(2020, 8, 6)
     },
     {
       title: 'Toilet Paper',
       amount: 15.81,
-      date: new Date(2023, 8, 6)
+      date: new Date(2021, 8, 6)
     },
     {
       title: 'Mobile Phone',
       amount: 75.21,
-      date: new Date(2023, 8, 6)
+      date: new Date(2022, 8, 6)
     },
     {
       title: 'Chair',
       amount: 14.85,
-      date: new Date(2023, 8, 6)
+      date: new Date(2023, 7, 5)
     },
   ];
 
