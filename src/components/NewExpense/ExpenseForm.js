@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './ExpenseForm.css';
 
 
-const ExpenseForm = () => {
+const ExpenseForm = (props) => {
     /**
      * first approach: multiple state
      */
@@ -51,6 +51,7 @@ const ExpenseForm = () => {
             amount: entredAmount,
             date: new Date(entredDate)
         };
+        props.onSaveExpenseData(expenseData);
         setEntredtitle('');
         setEntredAmount('');
         setEntredDate('');
@@ -63,15 +64,29 @@ const ExpenseForm = () => {
             <div className='new-expense__controls'>
                 <div className='new-expense__control'>
                     <label>Title</label>
-                    <input type="text" value={entredTitle} onChange={titleChangeHandler} />
+                    <input
+                        type="text"
+                        value={entredTitle}
+                        onChange={titleChangeHandler}
+                    />
                 </div>
                 <div className='new-expense__control'>
                     <label>Amount</label>
-                    <input type="number" min='0.01' step='.01' value={entredAmount} onChange={amountChangeHandler} />
+                    <input
+                        type="number"
+                        min='0.01' step='.01'
+                        value={entredAmount}
+                        onChange={amountChangeHandler}
+                    />
                 </div>
                 <div className='new-expense__control'>
                     <label>Date</label>
-                    <input type="date" min='2020-01-01' max='2023-12-13' value={entredDate} onChange={dateChangeHandler} />
+                    <input
+                        type="date"
+                        min='2020-01-01' max='2023-12-13'
+                        value={entredDate}
+                        onChange={dateChangeHandler}
+                    />
                 </div>
             </div>
             <div className='new-expense__actions'>
